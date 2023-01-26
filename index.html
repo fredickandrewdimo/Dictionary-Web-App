@@ -24,81 +24,83 @@
 </head>
 
 <body>
-    <nav>
-        <div class="" id="nav-content">
-            <img id="logo" src="#" alt="">
-            <div id="nav-items">
-                <div id="font-option">
-                    <p id="font-name">Serif</p>
+    <nav class="container mx-auto px-4 pt-8 pb-4 md:w-3/5">
+        <div class="flex justify-between align-center" id="nav-content">
+            <img id="logo" src="/Dictionary-Web-App/images/dictionary-logo.svg" alt="">
+            <div class="flex align-center" id="nav-items">
+                <div class="flex align-center" id="font-option">
+                    <p id="font-name" class="text-lg">Serif</p>
                     <select id="font-select" name="" id=""></select>
                 </div>
-                <div id="horizontal-line"></div>
-                <div id="mode-container">
+                <!-- <div class="h-2.5 w-px text-gray-600" id="horizontal-line">
+
+                </div> -->
+                <!-- <div id="mode-container">
                     <input id="mode-toggler" type="toggle">
                     <i></i>
-                </div>
+                </div> -->
             </div>
         </div>
     </nav>
-    <main>
-        <div id="input-container">
-            <input type="text">
+    <main class="container mx-auto px-4 md:w-3/5 pb-20">
+        <div class="py-3" id="input-container">
+            <input class="p-3 w-full bg-gray-100 rounded-md" type="text">
         </div>
-        <div id="word-container">
-            <div id="word-name">
-                <p id="word">Keyboard</p>
-                <p id="pronounciation"></p>
+        <div class="flex align-center justify-between py-4" id="word-container">
+            <div class="" id="word-name">
+                <p class="text-6xl font-bold mb-2" id="word">Keyboard</p>
+                <p class="text-fuchsia-700" id="phonetic">/ˈkiːbɔːd/</p>
             </div>
-            <button id=audio-pronounciation>
-                <i></i>
-            </button>
+            <div class="flex align-center justify-center">
+                <!-- <button class="bg-fuchsia-200 w-11 h-11" id=audio-pronounciation> -->
+                <img src="/Dictionary-Web-App/images/play-icon.svg" alt="">
+                </button>
+            </div>
+
         </div>
-        <div id="noun-container">
-            <div id="noun">
-                <p>noun</p>
-                <hr>
+        <div class="py-4" id="noun-container">
+            <div class="flex justify-between align-center" id="noun">
+                <p class="font-bold mr-4 text-lg italic">noun</p>
+                <hr class="w-full mt-4">
             </div>
-            <div id="noun-meaning">
-                <p>Meaning</p>
-                <li id="meaning-list">
-                    <ul>(etc.) A set of keys used to operate a typewriter, computer etc.</ul>
-                    <ul>A component of many instruments including the piano, organ, and harpsichord</ul>
-                    <ul>A device with keys of a musical keyboard, used to control electronic sound-producing devices
-                        which may be build into or seperate from the keyboard device.</ul>
-                </li>
+            <div class="py-4" id="noun-meaning">
+                <p class="text-gray-500 mb-2">Meaning</p>
+                <div class="ml-4" id="meaning-list">
+                    <li>(etc.) A set of keys used to operate a typewriter, computer etc.</li>
+                    <li>A component of many instruments including the piano, organ, and harpsichord</li>
+                    <li>A device with keys of a musical keyboard, used to control electronic sound-producing devices
+                        which may be build into or seperate from the keyboard device.</li>
+                </div>
             </div>
         </div>
-        <div id="synonyms">
-            <p>Synonyms</p>
-            <div id="synonyms-list">
+        <div class="py-4 flex" id="synonyms">
+            <p class="text-gray-500 mr-4">Synonyms</p>
+            <div class="font-bold text flex text-fuchsia-700" id="synonyms-list">
                 <p>electronic keyboard</p>
             </div>
         </div>
-        <div id="verb-container">
-            <div id="verb">
-                <p>verb</p>
-                <hr>
+        <div class="py-4" id="verb-container">
+            <div class="flex justify-between align-center" id="verb">
+                <p class="font-bold mr-4 text-lg italic">verb</p>
+                <hr class="w-full mt-4">
             </div>
-            <div id="verb-meaning">
-                <p>Meaning</p>
-                <li>
-                    <ul>
-                        <div>
-                            <p>
-                                To type on a computer keyboard.
-                            </p>
-                            <p>"Keyboard is the part of this job I hate the most."</p>
-                        </div>
-                    </ul>
-                </li>
+            <div class="py-4" id="verb-meaning">
+                <p class="text-gray-500 mb-2">Meaning</p>
+                <div class="ml-4">
+                    <li>
+                        To type on a computer keyboard.
+                        <br>"Keyboard is the part of this job I hate the most."
+                    </li>
+                </div>
+
             </div>
         </div>
-        <div id="source-container">
-            <p>Source</p>
-            <div id="source-url">
-                <a href="#"></a>
-            </div>
-            <a href="#"><i></i></a>
+        <div class="py-4 flex align-center" id="source-container">
+            <p class="mr-4 text-sm text-gray-500">Source</p>
+            <a class="text-sm italic underline underline-offset-1" id="source-url"
+                href="#">https://api.dictionaryapi.dev/api/v2/entries/en/keyboard</a>
+        </div>
+        <a href="#"><i></i></a>
         </div>
     </main>
 </body>
