@@ -17,21 +17,23 @@
     <!-- Font -->
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="#">
-
-    <!-- Font awesome CDN -->
-    <!-- <script src="https://kit.fontawesome.com/f2f2d7c8e6.js" crossorigin="anonymous" defer></script> -->
+    <link rel="shortcut icon" href="/Dictionary-Web-App/images/dictionary-favicon.svg">
 </head>
 
 <body>
     <nav class="container mx-auto px-4 pt-8 pb-4 md:w-3/5">
         <div class="flex justify-between align-center" id="nav-content">
-            <img id="logo" src="/Dictionary-Web-App/images/dictionary-logo.svg" alt="">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-10 h-10 hover:text-fuchsia-700">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                </svg>
+            </a>
             <div class="flex align-center" id="nav-items">
-                <div class="flex align-center" id="font-option">
-                    <p id="font-name" class="text-lg">Serif</p>
+                <!-- <div class="flex align-center" id="font-option">
+                    <p id="font-name" class="text-lg font-serif">Serif</p>
                     <select id="font-select" name="" id=""></select>
-                </div>
+                </div> -->
                 <!-- <div class="h-2.5 w-px text-gray-600" id="horizontal-line">
 
                 </div> -->
@@ -43,65 +45,84 @@
         </div>
     </nav>
     <main class="container mx-auto px-4 md:w-3/5 pb-20">
-        <div class="py-3" id="input-container">
-            <input class="p-3 w-full bg-gray-100 rounded-md" type="text">
+        <div class="py-3 flex align-center" id="input-container">
+            <input class="focus:outline-none p-4 w-full bg-gray-100 rounded-l-md text-lg font-serif font-semibold"
+                type="text">
+            <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="w-14 h-16 text-fuchsia-700 hover:text-fuchsia-800 p-4 bg-gray-100 hover:bg-fuchsia-200 rounded-r-md">
+                    <path fill-rule="evenodd"
+                        d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
         </div>
         <div class="flex align-center justify-between py-4" id="word-container">
             <div class="" id="word-name">
-                <p class="text-6xl font-bold mb-2" id="word">Keyboard</p>
-                <p class="text-fuchsia-700" id="phonetic">/ˈkiːbɔːd/</p>
+                <p class="sm:text-6xl font-bold mb-2 font-serif text-4xl" id="word">Keyboard</p>
+                <p class="text-fuchsia-700 font-tinos" id="phonetic">/ˈkiːbɔːd/</p>
             </div>
             <div class="flex align-center justify-center">
-                <!-- <button class="bg-fuchsia-200 w-11 h-11" id=audio-pronounciation> -->
-                <img src="/Dictionary-Web-App/images/play-icon.svg" alt="">
+                <button class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="w-12 h-12 sm:w-16 sm:h-16 text-fuchsia-700 hover:text-fuchsia-100 bg-fuchsia-200 hover:bg-fuchsia-700 p-3 sm:p-4 rounded-full">
+                        <path fill-rule="evenodd"
+                            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                            clip-rule="evenodd" />
+                    </svg>
                 </button>
             </div>
 
         </div>
         <div class="py-4" id="noun-container">
             <div class="flex justify-between align-center" id="noun">
-                <p class="font-bold mr-4 text-lg italic">noun</p>
+                <p class="font-bold mr-4 text-lg font-serif">noun</p>
                 <hr class="w-full mt-4">
             </div>
             <div class="py-4" id="noun-meaning">
-                <p class="text-gray-500 mb-2">Meaning</p>
-                <div class="ml-4" id="meaning-list">
+                <p class="text-gray-500 mb-2 font-tinos">Meaning</p>
+                <ul class="marker:text-fuchsia-700 list-disc ml-8 font-tinos" id="meaning-list">
                     <li>(etc.) A set of keys used to operate a typewriter, computer etc.</li>
                     <li>A component of many instruments including the piano, organ, and harpsichord</li>
                     <li>A device with keys of a musical keyboard, used to control electronic sound-producing devices
                         which may be build into or seperate from the keyboard device.</li>
-                </div>
+                </ul>
             </div>
         </div>
         <div class="py-4 flex" id="synonyms">
-            <p class="text-gray-500 mr-4">Synonyms</p>
-            <div class="font-bold text flex text-fuchsia-700" id="synonyms-list">
-                <p>electronic keyboard</p>
+            <p class="text-gray-500 mr-4 font-tinos">Synonyms</p>
+            <div class="font-bold font-serif text flex text-fuchsia-700" id="synonyms-list">
+                <p class="">electronic keyboard</p>
             </div>
         </div>
         <div class="py-4" id="verb-container">
             <div class="flex justify-between align-center" id="verb">
-                <p class="font-bold mr-4 text-lg italic">verb</p>
+                <p class="font-bold mr-4 text-lg font-serif">verb</p>
                 <hr class="w-full mt-4">
             </div>
             <div class="py-4" id="verb-meaning">
-                <p class="text-gray-500 mb-2">Meaning</p>
-                <div class="ml-4">
-                    <li>
-                        To type on a computer keyboard.
-                        <br>"Keyboard is the part of this job I hate the most."
-                    </li>
-                </div>
+                <p class="text-gray-500 mb-2 font-tinos">Meaning</p>
+                <ul class="marker:text-fuchsia-700 list-disc ml-8 font-tinos">
+                    <div>
+                        <li>To type on a computer keyboard.</li>
+                        <p class="text-gray-500">"Keyboard is the part of this job I hate the most."</p>
+                    </div>
+                </ul>
 
             </div>
         </div>
-        <div class="py-4 flex align-center" id="source-container">
+        <hr class="w-full">
+        <div class="py-4 flex align-center font-tinos" id="source-container">
             <p class="mr-4 text-sm text-gray-500">Source</p>
-            <a class="text-sm italic underline underline-offset-1" id="source-url"
+            <a class="text-sm italic underline underline-offset-1 mr-2" id="source-url"
                 href="#">https://api.dictionaryapi.dev/api/v2/entries/en/keyboard</a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-4 h-4 text-gray-500 hover:text-fuchsia-700">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+            </a>
         </div>
-        <a href="#"><i></i></a>
-        </div>
+
     </main>
 </body>
 

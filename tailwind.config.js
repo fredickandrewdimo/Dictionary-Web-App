@@ -11,6 +11,10 @@ module.exports = {
         darkGray: "#707070",
         lightGray: "E8E8E8",
       },
+      fontFamily: {
+        serif: ["Source Serif Pro"],
+        tinos: ["Tinos"],
+      },
     },
   },
   plugins: [],
