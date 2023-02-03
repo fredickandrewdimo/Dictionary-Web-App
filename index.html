@@ -46,7 +46,7 @@
         <div class="py-3 flex align-center" id="input-container">
             <input id="search-input"
                 class="focus:outline-none p-4 w-full bg-gray-100 rounded-l-md text-lg font-serif font-semibold"
-                type="text">
+                type="text" placeholder="Search a word...">
             <button id="search-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                     class="w-14 h-16 text-fuchsia-700 hover:text-fuchsia-800 p-4 bg-gray-100 hover:bg-fuchsia-200 rounded-r-md">
                     <path fill-rule="evenodd"
@@ -58,10 +58,10 @@
         <div class="flex align-center justify-between py-4" id="word-container">
             <div class="" id="word-name">
                 <p class="sm:text-6xl font-bold mb-2 font-serif text-4xl" id="word">Keyboard</p>
-                <p class="text-fuchsia-700 font-tinos" id="phonetic">/ˈkiːbɔːd/</p>
+                <p id="phonetic" class="text-fuchsia-700 font-tinos">/ˈkiːbɔːd/</p>
             </div>
             <div class="flex align-center justify-center">
-                <button class="">
+                <button id="play-btn" class="">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                         class="w-12 h-12 sm:w-16 sm:h-16 text-fuchsia-700 hover:text-fuchsia-100 bg-fuchsia-200 hover:bg-fuchsia-700 p-3 sm:p-4 rounded-full">
                         <path fill-rule="evenodd"
@@ -69,6 +69,10 @@
                             clip-rule="evenodd" />
                     </svg>
                 </button>
+                <audio id="audio-element">
+                    <source src="https://api.dictionaryapi.dev/media/pronunciations/en/keyboard-us.mp3"
+                        type="audio/mpeg">
+                </audio>
             </div>
 
         </div>
@@ -79,18 +83,18 @@
             </div>
             <div class="py-4" id="noun-meaning">
                 <p class="text-gray-500 mb-2 font-tinos">Meaning</p>
-                <ul class="marker:text-fuchsia-700 list-disc ml-8 font-tinos" id="meaning-list">
-                    <li>(etc.) A set of keys used to operate a typewriter, computer etc.</li>
+                <ul id="meaning-list" class="marker:text-fuchsia-700 list-disc ml-8 font-tinos">
+                    <!-- <li>(etc.) A set of keys used to operate a typewriter, computer etc.</li>
                     <li>A component of many instruments including the piano, organ, and harpsichord</li>
                     <li>A device with keys of a musical keyboard, used to control electronic sound-producing devices
-                        which may be build into or seperate from the keyboard device.</li>
+                        which may be build into or seperate from the keyboard device.</li> -->
                 </ul>
             </div>
         </div>
         <div class="py-4 flex" id="synonyms">
             <p class="text-gray-500 mr-4 font-tinos">Synonyms</p>
-            <div class="font-bold font-serif text flex text-fuchsia-700" id="synonyms-list">
-                <p class="">electronic keyboard</p>
+            <div id="synonyms-list" class="font-bold font-serif text flex text-fuchsia-700">
+
             </div>
         </div>
         <div class="py-4" id="verb-container">
@@ -101,9 +105,10 @@
             <div class="py-4" id="verb-meaning">
                 <p class="text-gray-500 mb-2 font-tinos">Meaning</p>
                 <ul class="marker:text-fuchsia-700 list-disc ml-8 font-tinos">
-                    <div>
-                        <li>To type on a computer keyboard.</li>
-                        <p class="text-gray-500">"Keyboard is the part of this job I hate the most."</p>
+                    <div id="meaning-list-verb">
+                        <!-- <li id="verb-definition">To type on a computer keyboard.</li>
+                        <p id="verb-example" class="text-gray-500">"Keyboard is the part of this job I hate the most."
+                        </p> -->
                     </div>
                 </ul>
 
@@ -112,10 +117,10 @@
         <hr class="w-full">
         <div class="py-4 flex align-center font-tinos" id="source-container">
             <p class="mr-4 text-sm text-gray-500">Source</p>
-            <a class="text-sm italic underline underline-offset-1 mr-2" id="source-url"
-                href="#">https://api.dictionaryapi.dev/api/v2/entries/en/keyboard</a>
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-4 h-4 text-gray-500 hover:text-fuchsia-700">
+            <a class="text-sm italic underline underline-offset-1 mr-2" id="source-url" href="#" target="_blank"></a>
+            <a id="source-url-btn" href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-4 h-4 text-gray-500 hover:text-fuchsia-700">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                 </svg>
