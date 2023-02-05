@@ -102,9 +102,11 @@ function updateDescription(data) {
   }
 
   // VERB LIST
-  const verbList = document.createElement("li");
-  verbList.innerText = verbDefinition;
-  verbMeaningList.appendChild(verbList);
+  if (verbDefinition) {
+    const verbList = document.createElement("li");
+    verbList.innerText = verbDefinition;
+    verbMeaningList.appendChild(verbList);
+  }
 
   // VERB LIST EXAMPLE
   // const verbExampleList = document.createElement("p");
