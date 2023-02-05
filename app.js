@@ -107,10 +107,10 @@ function updateDescription(data) {
   verbMeaningList.appendChild(verbList);
 
   // VERB LIST EXAMPLE
-  const verbExampleList = document.createElement("p");
-  verbExampleList.classList.add("text-gray-500");
-  verbExampleList.innerText = `"${verbExample}"`;
-  verbList.appendChild(verbExampleList);
+  // const verbExampleList = document.createElement("p");
+  // verbExampleList.classList.add("text-gray-500");
+  // verbExampleList.innerText = `"${verbExample}"`;
+  // verbList.appendChild(verbExampleList);
 
   // Get the source url
   const sourceURL = data[0].sourceUrls;
@@ -125,7 +125,6 @@ function updateDescription(data) {
 const searchBtn = document.getElementById("search-btn");
 searchBtn.addEventListener("click", () => {
   const word = inputEl.value;
-
   searchWord(word);
   inputEl.value = "";
 });
