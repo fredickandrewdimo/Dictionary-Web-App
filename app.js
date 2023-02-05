@@ -79,6 +79,8 @@ function updateDescription(data) {
     synonymsList.appendChild(list);
   });
 
+  // VERB
+
   // Get the verb meaning and example
   let verbDefinitions;
   let verbDefinition;
@@ -94,15 +96,17 @@ function updateDescription(data) {
   });
 
   const verbMeaningList = document.getElementById("meaning-list-verb");
-
+  // REMOVE EXISITING FIRST CHILD
   while (verbMeaningList.firstChild) {
     verbMeaningList.removeChild(verbMeaningList.firstChild);
   }
 
+  // VERB LIST
   const verbList = document.createElement("li");
   verbList.innerText = verbDefinition;
   verbMeaningList.appendChild(verbList);
 
+  // VERB LIST EXAMPLE
   const verbExampleList = document.createElement("p");
   verbExampleList.classList.add("text-gray-500");
   verbExampleList.innerText = `"${verbExample}"`;
